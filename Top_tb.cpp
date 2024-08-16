@@ -1055,11 +1055,11 @@ void LogPredec(Inst& inst)
     fprintf(konataFile, "C\t-%lu\n",
         (main_time-state.fetches[inst.fetchID].fetchTime)/2);
     fprintf(konataFile, "S\t%u\t0\t%s\n", inst.id, "IF");
-    if ((state.fetches[inst.fetchID].pdTime < state.fetches[inst.fetchID].fetchTime))
-    {
-        printf("%li %li\n", state.fetches[inst.fetchID].fetchTime, state.fetches[inst.fetchID].pdTime);
-        Exit(1);
-    }
+    // if ((state.fetches[inst.fetchID].pdTime < state.fetches[inst.fetchID].fetchTime))
+    // {
+    //     printf("%li %li\n", state.fetches[inst.fetchID].fetchTime, state.fetches[inst.fetchID].pdTime);
+    //     Exit(1);
+    // }
     fprintf(konataFile, "C\t%lu\n",
         (state.fetches[inst.fetchID].pdTime - state.fetches[inst.fetchID].fetchTime)/2);
 
